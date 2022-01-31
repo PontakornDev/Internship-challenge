@@ -1,0 +1,26 @@
+<%- include ("_header" ) %>
+<body>
+    <%JSON.stringify(product) %>
+    <div class="container">
+        
+        <div class="d-flex justify-content-center align-items-center mt-5"> <button class="btn btn-dark"><strong>OUR CATEGORIES</strong></button> </div>
+        <div class="d-flex justify-content-center mt-3"> <span class="text text-center">Finding Best Products Now<br> in Your Fingertips</span> </div>
+        <div class="row mt-2 g-4">
+            <% if(product){%>
+                <% for(var i=0; i<product.length;i++){%>
+            <div class="col-md-3">
+                <div class="card p-1">
+                    <a href="/productAdd/<%= product[i].id  %> " >
+                    <div class="d-flex justify-content-between align-items-center p-2">
+                        <div class="flex-column lh-1 imagename"> <span style="text-decoration: none;"><%= product[i].name %></span><br></div>
+                        <div> <img src="<%= product[i].image %>" height="100" width="100" /> <p class="price"><b>Price: <%= product[i].price %> baht</b> </p></div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <%}%>
+                        <%}%> 
+        </div>
+    </div>
+</body>
+<%- include ("_footer" ) %>

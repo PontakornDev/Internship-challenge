@@ -1,0 +1,50 @@
+<%- include ("_header" ) %>
+<body>
+    <%JSON.stringify(product) %> <input type="hidden" id="id_product" value="<%= product.id  %> ">
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="card-add">
+                    <div class="row">
+                        <div class="col-md-6 bg-light">
+                            <div class="images p-3">
+                                <div class="text-center p-4"> <img id="main-image" src="<%= product.image  %> " width="250" /> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product p-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center"> <a href="/product"><i class="fa fa-long-arrow-left"></i><span class="ml-1">Back</span></a>  </div> <i class="fa fa-shopping-cart text-muted"></i>
+                                </div>
+                                <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Name Product</span>
+                                    <h5 class="text-uppercase"><%= product.name %></h5>
+                                    <div class="price d-flex flex-row align-items-center"><strong>price: </strong>  <span class="act-price">฿<%= product.price  %> </span> <input type="hidden" class="product_price" value="<%= product.price  %>">
+                                        <div class="ml-2"> <small>Status:</small> <% if (product.in_stock) {%> <span>In stock</span> <% }else{%> <span class="dis-price" style="color: red;">Out stock</span><%}%> </div>
+                                    </div>
+                                </div>
+                                <p>Money</p>
+                                <input type="number" class="monitor" value="0" disabled> BAHT.&nbsp&nbsp
+                                <a class="btn btn-info" id="clear"><strong>Clear</strong> <i class="fa fa-paint-brush" aria-hidden="true"></i></a>
+                                <div class="sizes mt-5">
+                                    <h6 class="text-uppercase">add coin</h6> 
+                                    <button value="1" id="one" ><img src="/img/1.png" alt="1" class="one" title="1 บาท"> </button>
+                                    <button value="2" id="two" ><img src="/img/2.png" alt="2" class="two" title="2 บาท"> </button>
+                                    <button value="5" id="five"><img src="/img/5.png" alt="5" class="five" title="5 บาท"> </button>
+                                    <button value="10" id="ten"><img src="/img/10.png" alt="10" class="ten" title="10 บาท"> </button>
+                                </div>
+                                <div class="cart mt-4 align-items-center"> 
+                                    <% if (product.in_stock) {%>
+                                    <button class="btnsub btn btn-danger text-uppercase mr-2 px-4" id="submit" type="submit">pay ment</button> <i class="fa fa-heart text-muted" style="color: green!important;"></i>
+                                    <%}else{%>
+                                        <button class="btnsub btn btn-danger text-uppercase mr-2 px-4" disabled>Can not select Order</button> <i class="fa fa-heart text-muted" style="color: red!important;"></i>
+                                    <%}%>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ("_footer" ) %>

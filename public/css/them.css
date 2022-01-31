@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2eae3;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+/* Product  */
+.name {
+    font-size: 16px;
+    color: #e83d16 !important;
+    font-weight: 500
+}
+
+.navbar-toggler {
+    font-size: 15px
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #000 !important;
+    font-weight: bold;
+    margin-left: 40px
+}
+
+.form-control {
+    height: 32px;
+    width: 100%;
+    border-radius: 20px;
+    color: #c7c6cb;
+    font-size: 13px;
+    border: none;
+}
+
+.btnsub {
+    height: 50px;
+    width: 170px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ec4920;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text {
+    font-size: 23px;
+    font-weight: bold
+}
+
+.card {
+    height: 150px;
+    overflow: hidden;
+    border: none;
+    border-radius: 15px;
+    
+}
+
+.imagename {
+    font-size: 14px;
+    font-weight: bold;
+}
+.price{
+    color: rgb(60, 112, 9);
+}
+
+/* Product Add  */
+.card-add {
+    border: none
+}
+
+.product {
+    background-color: #eee
+}
+
+.brand {
+    font-size: 13px
+}
+
+.act-price {
+    color: red;
+    font-weight: 700
+}
+
+.dis-price {
+    text-decoration: line-through
+}
+
+.about {
+    font-size: 14px
+}
+
+.color {
+    margin-bottom: 10px
+}
+
+.one,.two,.five,.ten {
+    width: 50px;
+    height: 50px;
+}
