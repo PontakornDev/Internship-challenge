@@ -1,4 +1,5 @@
-# examinationInternship.github.io
+# Internship-challenge
+https://internship-challenge2021.herokuapp.com/product
 # install dependencies
 $ npm install
 
